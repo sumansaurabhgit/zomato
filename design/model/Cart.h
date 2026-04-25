@@ -4,8 +4,8 @@
 #include<iostream>
 #include<vector>
 #include<string>
-#include "../models/MenuItem.h"
-#include "../models/Resturant.h"
+#include "MenuItem.h"
+#include "Resturant.h"
 
 using namespace std;
 
