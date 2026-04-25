@@ -3,8 +3,10 @@
 
 #include<bits/stdc++.h>
 #include "MenuItem.h"
-#include "Resturant.h"
+#include "../model/Resturant.h"
 #include "User.h"
+#include "PaymentStrategy.h"
+using namespace std;
 
 class Order{
       static int nextOrderId;
@@ -15,7 +17,6 @@ class Order{
       PaymentStrategy* paymentStrategy;
       double total;
       string scheduled;
-
       public:
       Order(){
         user=nullptr;
@@ -60,7 +61,9 @@ class Order{
             total+=it->getPrice();
            }
       }
-
+      void setScheduled(string t){
+           this->scheduled=t;
+      }
       vector<MenuItem> getItems(){
         return items;
       }
